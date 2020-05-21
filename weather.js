@@ -5,7 +5,7 @@ $("#submitwheather").click(function () {
     if (city != '') {
 
         $.ajax({
-            url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&APPID=a4578e39643716894ec78b28a71c7110',
+            url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&APPID=a4578e39643716894ec78b28a71c7110',
             type: "GET",
             success: function (data) {
                 previsions(city);
@@ -51,7 +51,7 @@ function previsions(city) {
 
     $.ajax({
 
-        url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + '&units=metric&APPID=a4578e39643716894ec78b28a71c7110',
+        url: 'https://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + '&units=metric&APPID=a4578e39643716894ec78b28a71c7110',
         type: 'GET',
         success: function (result, statut) {
             $.each(result.list, function (k, result) {
